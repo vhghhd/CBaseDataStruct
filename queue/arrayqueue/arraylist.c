@@ -13,7 +13,7 @@ static int IsArrayListFull(PArrayList plist)
 	return ( plist->front == ( ( plist->rear + 1 ) & ( plist->size - 1 ) ) );
 }
 
-PArrayList CreateArrayList(unsigned int size)
+PArrayList CreateArrayList(const unsigned int size)
 {
 	PArrayList plist = (PArrayList)malloc(sizeof(ArrayList));
 	memset(plist,0,sizeof(plist));
@@ -32,7 +32,7 @@ int FreeArrayList(PArrayList plist)
 	free(plist);
 }
 
-int EnArrayList(PArrayList plist,DataType data)
+int EnArrayList(PArrayList plist,const DataType data)
 {
 	if ( IsArrayListFull(plist) )
 	{

@@ -12,10 +12,10 @@ typedef struct ARRAYLIST {
 	unsigned int size;
 }ArrayList,*PArrayList;
 
-PArrayList CreateArrayList(unsigned int size);
+PArrayList CreateArrayList(const unsigned int size);
 int FreeArrayList(PArrayList plist);
 
-int EnArrayList(PArrayList plist,DataType data);
+int EnArrayList(PArrayList plist,const DataType data);
 int DeArrayList(PArrayList plist,DataType *data);
 
 #if TEST_ARRAYLIST
